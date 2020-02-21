@@ -190,6 +190,9 @@ public class first_page extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new fragment_home()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
